@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do App</title>
+    <link rel="stylesheet" href="./src/assets/output.css">
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <script src="/node_modules/sortablejs/Sortable.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Nav Bar -->
+    <div class="bg-blue-600 text-center py-2 text-white font-light">If you've got tasks, start managing today!</div>
+
+    <!-- Header -->
+    <div class="mx-auto w-[360px] mt-16">
+        <h1 class="text-black text-xl font-bold">
+            Manage your task,<span id="userName" class="text-neutral-500">Welcome</span>
+        </h1>
+        <p class="text-neutral-600">Add your tasks and start organizing them quickly.</p>
+    </div>
+    <!-- Input Field -->
+    <div class="mx-auto w-[360px] mt-5 hidden" id="addTaskContainer">
+        <div class="flex gap-2">
+            <input type="text" id="task"
+                class="w-[87%] border rounded-lg p-3 focus:outline-none focus:border-blue-600 focus:ring-4 focus:ring-blue-100"
+                placeholder="eg.Revise Array">
+            <input type="datetime-local" id="dueDate"
+                class="w-[13%] border rounded-lg p-3 focus:outline-none focus:border-blue-600 focus:ring-4 focus:ring-blue-100">
+        </div>
+        <button id="addTask" class="border px-4 py-2 rounded-lg bg-black text-white mt-3 text-sm font-light">Add
+            Task</button>
+    </div>
+
+    <!-- To do List -->
+    <div class="w-[360px] mx-auto mt-5" id="todoContainer">
+
+    </div>
+
+    <button id="addTaskButton"
+        class="fixed bottom-10 right-10 bg-black text-white w-12 flex rounded-full items-center justify-center h-12">
+        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="24" fill="currentColor" class="bi bi-plus"
+            viewBox="0 0 16 16">
+            <path
+                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+        </svg>
+    </button>
+
+
+    <script src="./src/assets/app.js"></script>
+</body>
+
+</html>
